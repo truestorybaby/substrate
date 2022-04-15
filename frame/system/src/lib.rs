@@ -1382,10 +1382,8 @@ impl<T: Config> Pallet<T> {
 	/// impact on the PoV size of a block. Users should use alternative and well bounded storage
 	/// items for any behavior like this.
 	#[cfg(any(feature = "std", feature = "runtime-benchmarks", test))]
-	pub fn events() -> Vec<EventRecord<T::Event, T::Hash>> {
-		// Dereferencing the events here is fine since we are not in the
-		// memory-restricted runtime.
-		Self::read_events_no_consensus().into_iter().map(|e| *e).collect()
+	pub fn events() -> Vec<Box<EventRecord<T::Event, T::Hash>>> {
+		Self::read_events_no_consensus()
 	}
 
 	/// Get the current events deposited by the runtime.
