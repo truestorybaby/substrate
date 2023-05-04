@@ -13,7 +13,7 @@ publish = false
 targets = ["x86_64-unknown-linux-gnu"]
 
 [dependencies]
-bytes = { version = "1.1.0", default-features = false }
+bytes = { version = "1.4.0", default-features = false }
 sp-core = { version = "7.0.0", default-features = false, path = "../../core" }
 sp-io = { version = "7.0.0", default-features = false, path = "../../io" }
 sp-runtime-interface = { version = "7.0.0", default-features = false, path = "../" }
