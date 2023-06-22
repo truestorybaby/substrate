@@ -20,7 +20,7 @@ asynchronous-codec = "0.6"
 backtrace = "0.3.67"
 bytes = "1"
 codec = { package = "parity-scale-codec", version = "3.2.2", features = ["derive"] }
-either = "1.5.3"
+either = "1.8.1"
 fnv = "1.0.6"
 futures = "0.3.21"
 futures-timer = "3.0.2"
