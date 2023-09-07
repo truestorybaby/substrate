@@ -23,4 +23,4 @@ default = ["metered"]
 metered = []
 
 [dev-dependencies]
-tokio-test = "0.4.2"
+tokio-test = "0.4.3"
