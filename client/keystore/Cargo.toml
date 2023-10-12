@@ -24,4 +24,4 @@ sp-core = { version = "7.0.0", path = "../../primitives/core" }
 sp-keystore = { version = "0.13.0", path = "../../primitives/keystore" }
 
 [dev-dependencies]
-tempfile = "3.1.0"
+tempfile = "3.8.0"
