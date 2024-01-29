@@ -29,7 +29,7 @@ libp2p = { version = "0.50.0", features = ["dns", "identify", "kad", "macros", "
 log = "0.4.17"
 lru = "0.8.1"
 parking_lot = "0.12.1"
-pin-project = "1.0.12"
+pin-project = "1.1.4"
 rand = "0.8.5"
 serde = { version = "1.0.136", features = ["derive"] }
 serde_json = "1.0.85"
