@@ -19,7 +19,7 @@ prost-build = "0.11"
 cid = "0.8.6"
 futures = "0.3.21"
 libp2p = "0.50.0"
-log = "0.4.17"
+log = "0.4.22"
 prost = "0.11"
 thiserror = "1.0"
 unsigned-varint = { version = "0.7.1", features = ["futures", "asynchronous_codec"] }

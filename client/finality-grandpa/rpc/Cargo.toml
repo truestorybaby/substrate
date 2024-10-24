@@ -13,7 +13,7 @@ homepage = "https://substrate.io"
 finality-grandpa = { version = "0.16.1", features = ["derive-codec"] }
 futures = "0.3.16"
 jsonrpsee = { version = "0.16.2", features = ["client-core", "server", "macros"] }
-log = "0.4.8"
+log = "0.4.22"
 parity-scale-codec = { version = "3.2.2", features = ["derive"] }
 serde = { version = "1.0.105", features = ["derive"] }
 thiserror = "1.0"
