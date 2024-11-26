@@ -30,7 +30,7 @@ log = { version = "0.4.17", optional = true }
 futures = { version = "0.3.21", features = ["thread-pool"], optional = true }
 secp256k1 = { version = "0.24.0", features = ["recovery", "global-context"], optional = true }
 tracing = { version = "0.1.29", default-features = false }
-tracing-core = { version = "0.1.28", default-features = false}
+tracing-core = { version = "0.1.33", default-features = false}
 
 # Required for backwards compatibility reason, but only used for verifying when `UseDalekExt` is set.
 ed25519-dalek = { version = "1.0.1", default-features = false, optional = true }
