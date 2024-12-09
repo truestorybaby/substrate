@@ -168,6 +168,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "anes"
+version = "0.1.6"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4b46cbb362ab8752921c97e041f5e366ee6297bd428a31275b9fcf1e380f7299"
+
+[[package]]
 name = "ansi_term"
 version = "0.12.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -915,6 +921,33 @@ dependencies = [
 ]
 
 [[package]]
+name = "ciborium"
+version = "0.2.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "42e69ffd6f0917f5c029256a24d0161db17cea3997d185db0d35926308770f0e"
+dependencies = [
+ "ciborium-io",
+ "ciborium-ll",
+ "serde",
+]
+
+[[package]]
+name = "ciborium-io"
+version = "0.2.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "05afea1e0a06c9be33d539b876f1ce3692f4afea2cb41f740e7743225ed1c757"
+
+[[package]]
+name = "ciborium-ll"
+version = "0.2.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "57663b653d948a338bfb3eeba9bb2fd5fcfaecb9e199e87e1eda4d9e8b240fd9"
+dependencies = [
+ "ciborium-io",
+ "half 2.4.1",
+]
+
+[[package]]
 name = "cid"
 version = "0.8.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -972,8 +1005,20 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a0610544180c38b88101fecf2dd634b174a62eef6946f84dfc6a7127512b381c"
 dependencies = [
  "bitflags",
- "textwrap",
+ "textwrap 0.11.0",
  "unicode-width",
+]
+
+[[package]]
+name = "clap"
+version = "3.2.25"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4ea181bf566f71cb9a5d17a59e1871af638180a18fb0035c92ae62b705207123"
+dependencies = [
+ "bitflags",
+ "clap_lex 0.2.4",
+ "indexmap",
+ "textwrap 0.16.1",
 ]
 
 [[package]]
@@ -984,7 +1029,7 @@ checksum = "a7db700bc935f9e43e88d00b0850dae18a63773cfbec6d8e070fccf7fef89a39"
 dependencies = [
  "bitflags",
  "clap_derive",
- "clap_lex",
+ "clap_lex 0.3.0",
  "is-terminal",
  "once_cell",
  "strsim",
@@ -1011,6 +1056,15 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn",
+]
+
+[[package]]
+name = "clap_lex"
+version = "0.2.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2850f2f5a82cbf437dd5af4d49848fbdfc27c157c3d010345776f952765261c5"
+dependencies = [
+ "os_str_bytes",
 ]
 
 [[package]]
@@ -1250,9 +1304,8 @@ dependencies = [
  "atty",
  "cast",
  "clap 2.34.0",
- "criterion-plot",
+ "criterion-plot 0.4.5",
  "csv",
- "futures",
  "itertools",
  "lazy_static",
  "num-traits",
@@ -1265,6 +1318,33 @@ dependencies = [
  "serde_derive",
  "serde_json",
  "tinytemplate",
+ "walkdir",
+]
+
+[[package]]
+name = "criterion"
+version = "0.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e7c76e09c1aae2bc52b3d2f29e13c6572553b30c4aa1b8a49fd70de6412654cb"
+dependencies = [
+ "anes",
+ "atty",
+ "cast",
+ "ciborium",
+ "clap 3.2.25",
+ "criterion-plot 0.5.0",
+ "futures",
+ "itertools",
+ "lazy_static",
+ "num-traits",
+ "oorandom",
+ "plotters",
+ "rayon",
+ "regex",
+ "serde",
+ "serde_derive",
+ "serde_json",
+ "tinytemplate",
  "tokio",
  "walkdir",
 ]
@@ -1274,6 +1354,16 @@ name = "criterion-plot"
 version = "0.4.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2673cc8207403546f45f5fd319a974b1e6983ad1a3ee7e6041650013be041876"
+dependencies = [
+ "cast",
+ "itertools",
+]
+
+[[package]]
+name = "criterion-plot"
+version = "0.5.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6b50826342786a51a89e2da3a28f1c32b06e387201bc2d19791f622c673706b1"
 dependencies = [
  "cast",
  "itertools",
@@ -2411,7 +2501,7 @@ dependencies = [
 name = "frame-system"
 version = "4.0.0-dev"
 dependencies = [
- "criterion",
+ "criterion 0.4.0",
  "frame-support",
  "log",
  "parity-scale-codec",
@@ -2782,6 +2872,16 @@ name = "half"
 version = "1.8.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "eabb4a44450da02c90444cf74558da904edde8fb4e9035a9a6a4e15445af0bd7"
+
+[[package]]
+name = "half"
+version = "2.4.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6dd08c532ae367adf81c312a4580bc67f1d0fe8bc9c460520283f4c0ff277888"
+dependencies = [
+ "cfg-if",
+ "crunchy",
+]
 
 [[package]]
 name = "handlebars"
@@ -4695,7 +4795,7 @@ dependencies = [
  "assert_cmd",
  "clap 4.0.32",
  "clap_complete",
- "criterion",
+ "criterion 0.4.0",
  "frame-benchmarking-cli",
  "frame-system",
  "frame-system-rpc-runtime-api",
@@ -4777,7 +4877,7 @@ dependencies = [
 name = "node-executor"
 version = "3.0.0-dev"
 dependencies = [
- "criterion",
+ "criterion 0.4.0",
  "frame-benchmarking",
  "frame-support",
  "frame-system",
@@ -7994,7 +8094,7 @@ dependencies = [
 name = "sc-client-db"
 version = "0.10.0-dev"
 dependencies = [
- "criterion",
+ "criterion 0.4.0",
  "hash-db",
  "kitchensink-runtime",
  "kvdb",
@@ -8271,7 +8371,7 @@ version = "0.10.0-dev"
 dependencies = [
  "array-bytes",
  "assert_matches",
- "criterion",
+ "criterion 0.4.0",
  "env_logger",
  "lru",
  "num_cpus",
@@ -9021,7 +9121,7 @@ dependencies = [
  "ansi_term",
  "atty",
  "chrono",
- "criterion",
+ "criterion 0.4.0",
  "lazy_static",
  "libc",
  "log",
@@ -9062,7 +9162,7 @@ dependencies = [
  "array-bytes",
  "assert_matches",
  "async-trait",
- "criterion",
+ "criterion 0.4.0",
  "futures",
  "futures-timer",
  "linked-hash-map",
@@ -9338,7 +9438,7 @@ version = "0.11.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2bef2ebfde456fb76bbcf9f59315333decc4fda0b2b44b420243c11e0f5ec1f5"
 dependencies = [
- "half",
+ "half 1.8.2",
  "serde",
 ]
 
@@ -9584,7 +9684,7 @@ dependencies = [
 name = "sp-api-test"
 version = "2.0.1"
 dependencies = [
- "criterion",
+ "criterion 0.4.0",
  "futures",
  "log",
  "parity-scale-codec",
@@ -9629,7 +9729,7 @@ dependencies = [
 name = "sp-arithmetic"
 version = "6.0.0"
 dependencies = [
- "criterion",
+ "criterion 0.4.0",
  "integer-sqrt",
  "num-traits",
  "parity-scale-codec",
@@ -9820,7 +9920,7 @@ dependencies = [
  "base58",
  "bitflags",
  "blake2",
- "criterion",
+ "criterion 0.4.0",
  "dyn-clonable",
  "ed25519-zebra",
  "futures",
@@ -10309,7 +10409,7 @@ version = "7.0.0"
 dependencies = [
  "ahash 0.7.6",
  "array-bytes",
- "criterion",
+ "criterion 0.4.0",
  "hash-db",
  "hashbrown 0.12.3",
  "lazy_static",
@@ -10905,6 +11005,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "textwrap"
+version = "0.16.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "23d434d3f8967a09480fb04132ebe0a3e088c173e6d0ee7897abbdf4eab0f8b9"
+
+[[package]]
 name = "thiserror"
 version = "1.0.38"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -11294,7 +11400,7 @@ version = "0.33.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c5b26bd2cdd7641c5beb476b314c0cb1f629832bf21a6235f545e2d47bc9d05a"
 dependencies = [
- "criterion",
+ "criterion 0.3.6",
  "hash-db",
  "keccak-hasher",
  "memory-db",
