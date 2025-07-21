@@ -15,7 +15,7 @@ targets = ["x86_64-unknown-linux-gnu"]
 [dependencies]
 memmap2 = "0.5.0"
 serde = { version = "1.0.136", features = ["derive"] }
-serde_json = "1.0.85"
+serde_json = "1.0.99"
 sc-chain-spec-derive = { version = "4.0.0-dev", path = "./derive" }
 sc-network-common = { version = "0.10.0-dev", path = "../network/common" }
 sc-telemetry = { version = "4.0.0-dev", path = "../telemetry" }
