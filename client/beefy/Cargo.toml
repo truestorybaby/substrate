@@ -38,7 +38,7 @@ sp-mmr-primitives = { version = "4.0.0-dev", path = "../../primitives/merkle-mou
 sp-runtime = { version = "7.0.0", path = "../../primitives/runtime" }
 
 [dev-dependencies]
-serde = "1.0.136"
+serde = "1.0.156"
 strum = { version = "0.24.1", features = ["derive"] }
 tempfile = "3.1.0"
 tokio = "1.22.0"
