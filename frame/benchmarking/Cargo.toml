@@ -32,7 +32,7 @@ sp-storage = { version = "7.0.0", default-features = false, path = "../../primit
 
 [dev-dependencies]
 array-bytes = "4.1"
-rusty-fork = { version = "0.3.0", default-features = false }
+rusty-fork = { version = "0.3.1", default-features = false }
 sp-keystore = { version = "0.13.0", path = "../../primitives/keystore" }
 
 [features]
