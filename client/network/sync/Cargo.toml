@@ -13,7 +13,7 @@ documentation = "https://docs.rs/sc-network-sync"
 targets = ["x86_64-unknown-linux-gnu"]
 
 [build-dependencies]
-prost-build = "0.11"
+prost-build = "0.14"
 
 [dependencies]
 array-bytes = "4.1"
