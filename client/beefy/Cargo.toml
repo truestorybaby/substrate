@@ -15,7 +15,7 @@ codec = { package = "parity-scale-codec", version = "3.2.2", features = ["derive
 fnv = "1.0.6"
 futures = "0.3"
 log = "0.4"
-parking_lot = "0.12.1"
+parking_lot = "0.12.5"
 thiserror = "1.0"
 wasm-timer = "0.2.5"
 beefy-primitives = { version = "4.0.0-dev", path = "../../primitives/beefy", package = "sp-beefy" }
